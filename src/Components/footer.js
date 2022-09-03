@@ -16,9 +16,9 @@ const Footer = () => {
 <button>our blog</button>
       </div>
       <div className="social">
-        <a href="#"><FaFacebook className='fb'/></a>
-        <a href="#"><FaWhatsapp className='gb'/></a>
-        <a href="#"><FaLinkedin className='lin'/></a>
+        <a href="https://www.facebook.com/aka.cornelius.5"><FaFacebook className='fb'/></a>
+        <a href="https://www.facebook.com/aka.cornelius.5"><FaWhatsapp className='gb'/></a>
+        <a href="https://www.facebook.com/aka.cornelius.5"><FaLinkedin className='lin'/></a>
       
       </div>
       <h4 className='copyright'>&copy; nelsonLite</h4>

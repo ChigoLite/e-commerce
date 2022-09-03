@@ -1,5 +1,6 @@
 body{ background: linear-gradient(rgba(226, 221, 221, 0.918),rgba(76, 233, 76, 0.288));
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Tangerine', serif;
+    text-shadow: 4px 4px 4px #aaa;
 }
 
 *{box-sizing: border-box;
@@ -293,11 +294,11 @@ text-decoration: none;
     margin: 8px;
 }
 .social{
-    margin-left:2rem ;
+    margin-left:0.5rem ;
 }
 .social a{
-    margin: 1rem;
-    font-size: 1.3rem;
+    margin: 0.5rem;
+    font-size: 2rem;
 }
 .gb{
     color: rgb(9, 129, 9);
