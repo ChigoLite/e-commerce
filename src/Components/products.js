@@ -1,15 +1,11 @@
-import { Button, Card, CardActions, CardContent, CardMedia, Grid,Menu,MenuItem,Popover,ThemeProvider, Typography } from '@mui/material';
-import React,{useState} from 'react';
+import { Button, Card, CardActions, CardContent, CardMedia, Grid,ThemeProvider, Typography } from '@mui/material';
 import Theme from '../theme';
 import { Addtochart ,} from '../features/cart/slice'
-import { useSelector, useDispatch } from 'react-redux';
-import { Store } from '../store';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
-
-const Products = ({ name, image, descrip, id, category, price }) => {
+const Products = ({ name, image, descrip, id,  price }) => {
   const dispatch = useDispatch()
- const{submenu}=useSelector(store=>store.cart)
   return (
     <ThemeProvider theme={Theme}>
           <Grid item sm={6} md={4} xs={12} >

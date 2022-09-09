@@ -23,7 +23,7 @@ export const gadgets = [
         name: 'cardigal-swed',
         id: 3,
         category: 'gucci-swed',
-        image: "/gadgets/Cardigalpolo.jpg",
+        image: "/gadgets/Swed.jpg",
         price: 30,
         amount: 0,
         size: 'xl,xx and x ',

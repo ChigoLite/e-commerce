@@ -9,7 +9,7 @@ import Footer from './Components/footer';
 import Form from "./Components/form";
 
 const App = () => {
-  const { goods, modal, submenu, current, total, bags } = useSelector(store => store.cart)
+  const { bags } = useSelector(store => store.cart)
   const dispatch=useDispatch()
   useEffect(() => {
     dispatch(Summation())

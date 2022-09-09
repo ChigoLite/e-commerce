@@ -1,4 +1,4 @@
-import { Avatar, Container, List, ListItem, ListItemAvatar, Typography,Stack, ButtonGroup, Button,Chip, Box,ThemeProvider, Fab, Grid } from '@mui/material';
+import { Avatar, Container,  Typography, ButtonGroup, Button,ThemeProvider, Fab, Grid } from '@mui/material';
 import React from 'react';
 import Nav from './nav';
 import { Link } from 'react-router-dom';
@@ -40,7 +40,7 @@ alignItems='center'
 spacing={4}>
           
           {bags.map((allp) => {
-            const {image, name ,price, size,amount,id,desc}=allp
+            const {image, name ,price,amount,id,}=allp
             return (
                  
                 <Grid item sm={4} md={3} xs={6} key={id}  >

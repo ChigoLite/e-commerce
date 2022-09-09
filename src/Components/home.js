@@ -1,9 +1,7 @@
-import React,{useEffect} from 'react';
+import React from 'react';
 import { useSelector,useDispatch } from 'react-redux'
 import Products from './products';
-import { AppBar, Box, Button, ButtonGroup, Card, CardContent, Container, Grid, Stack, Toolbar, Typography,Paper} from '@mui/material'
-import { ThemeProvider } from '@mui/material';
-import Theme from '../theme';
+import {  Container, Grid, Stack, Paper} from '@mui/material'
 import Nav from './nav';
 import Trending from './trending';
 import Modal from '../modal';
@@ -12,7 +10,7 @@ import {Filter} from '../features/cart/slice'
 
 
 const Home = () => {
-  const { goods, modal, submenu, current, total, bags, newcate,search } = useSelector(store => store.cart);
+  const { goods, modal, submenu, newcate,search } = useSelector(store => store.cart);
   const dispatch = useDispatch();
   return (
     <>
