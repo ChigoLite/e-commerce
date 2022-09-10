@@ -14,8 +14,7 @@ const Home = () => {
   const dispatch = useDispatch();
   return (
     <>
-      
-        <Nav />
+       <Nav />
       
         <Trending />
       {submenu && <SubMenu />}
@@ -52,15 +51,15 @@ const Home = () => {
                 return searchy
               }
             }).map((items => {
-                  return <Products key={ items.id} {...items} />
-                }))}
+              return <Products key={ items.id} {...items} />
+            }))}
                   </Grid>
         </Container>
       {modal && <Modal />} 
 
-                </>
-    
-  );
+      
+            </>
+      );
 }
 
 export default Home;

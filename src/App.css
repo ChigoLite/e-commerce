@@ -72,7 +72,7 @@ main.active{
     /* display: block; */
 }
 main.next{
-    transform: translateX(100%);
+    transform: translateX(-100%);
 }
 main.last{
     transform: translateX(-100%);
