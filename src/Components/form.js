@@ -1,19 +1,19 @@
-import{Container, FormControl, FormLabel, Paper, Radio, RadioGroup, Stack, TextField, Typography, FormControlLabel, Checkbox, Button
+import{Container, FormControl, FormLabel, Paper, Radio, RadioGroup, Stack, TextField, Typography, FormControlLabel, Checkbox, Button,Dialog,DialogActions,DialogContent,DialogContentText,DialogTitle
 }from '@mui/material'
 import { FaChevronLeft} from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Nav from './nav';
 import { useSelector, useDispatch } from 'react-redux'
-import{HandleChange1,HandleChange2,HandleChange3,HandleChange4,HandleChange5,HandleChange6,} from '../features/cart/formSlice'
+import{HandleChange1,HandleChange2,HandleChange3,HandleChange4,HandleChange5,HandleChange6,HandleChangeAll,Show,Hide} from '../features/cart/formSlice'
 const Form = () => {
     const{ firstname,
     lastname,
     email,
     number,
     postcode,
-    state}=useSelector(store=>store.form) 
+    state,open}=useSelector(store=>store.form) 
     const dispatch = useDispatch()
-    
+ 
     return (
         <>
             <Nav/>
@@ -60,8 +60,36 @@ const Form = () => {
                     </Stack>
                   
                     <br />
-                    <Button fullWidth variant='contained'><Typography sx={{textAlign:'center'}} variant='h4' component='div'>Submit</Typography></Button>
-      </Paper>
+                    <Button onClick={()=>dispatch(Show())} fullWidth variant='contained'><Typography sx={{textAlign:'center'}} variant='h4' component='div'>Submit</Typography></Button>
+                </Paper>
+            
+
+    <div>
+    
+      <Dialog
+        open={open}
+        aria-labelledby="alert-dialog-title"
+        aria-describedby="alert-dialog-description"
+      >
+        <DialogTitle id="alert-dialog-title">
+          {"Are You Sure You Want To Submit?"}
+        </DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-description">
+           Check your information well, in other to avoid delay or deny delivery...
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+                            <Button onClick={() => {
+                                dispatch(HandleChangeAll());
+                                dispatch(Hide());
+                            } } autoFocus>Continue</Button>
+          <Button onClick={()=>dispatch(Hide())} >
+            Discard
+          </Button>
+        </DialogActions>
+      </Dialog>
+    </div>
             </Container>
       
       </>

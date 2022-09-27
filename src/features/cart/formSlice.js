@@ -16,6 +16,16 @@ const Formslice = createSlice({
     name: 'input',
     initialState,
     reducers: {
+        HandleChangeAll: (state, action) => {
+            
+            state.firstname = '';
+            state.lastname = '';
+            state.email = '';
+            state.number = '';
+            state.state = '';
+            state.postcode = '';
+          
+        },
         HandleChange1: (state, action) => {
             
             state.firstname = action.payload;
@@ -56,5 +66,5 @@ const Formslice = createSlice({
       
     }
 })
- export const {HandleChange1,HandleChange2,HandleChange3,HandleChange4,HandleChange5,HandleChange6,Show,Hide}=Formslice.actions
+ export const {HandleChange1,HandleChange2,HandleChange3,HandleChange4,HandleChange5,HandleChange6,Show,Hide,HandleChangeAll}=Formslice.actions
 export default Formslice.reducer;

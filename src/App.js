@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import Specs from './Components/spec'
 import Footer from './Components/footer';
 import Form from "./Components/form";
+import Faq from "./subFolder/faq";
 
 const App = () => {
   const { bags } = useSelector(store => store.cart)
@@ -20,6 +21,7 @@ const App = () => {
        <Route path="/" exact element={<Home/>} /> 
        <Route path="/chart" element={<Shoppingchart/>} /> 
         <Route path="/form" element={<Form/>}/>
+        <Route path="/faq" element={<Faq/>}/>
         <Route path="/:id" element={<Specs/>}/>
     </Routes>
       <Footer/>

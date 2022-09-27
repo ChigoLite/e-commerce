@@ -15,7 +15,7 @@ const TrendingImg = () => {
     useEffect(() => {
      const slide=   setInterval(() => {
          setValue(value + 1)
-        }, 3000);
+        }, 6000);
         return () => {
             clearInterval(slide)
         }

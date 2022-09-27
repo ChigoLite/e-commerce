@@ -1,10 +1,11 @@
 import React,{useState} from 'react';
-import { ThemeProvider, AppBar, Toolbar ,Badge, IconButton, Drawer,Box, TextField,InputAdornment, Typography, Button} from '@mui/material';
+import { ThemeProvider,Stack, AppBar, Toolbar ,Badge, IconButton,Avatar, Drawer,Box, TextField,InputAdornment, Typography, Button} from '@mui/material';
 import { FaShoppingBasket, FaBars,FaSearchengin, FaAdn } from 'react-icons/fa'
 import{useSelector,useDispatch} from 'react-redux'
 import {Link} from 'react-router-dom'
 import Theme from '../theme';
 import{Change} from '../features/cart/slice'
+import FadeMenu from './tesing';
 const Nav = () => {
   const { current,search } = useSelector(store => store.cart)
   const [draw, setDraw] = useState(false);
@@ -19,8 +20,19 @@ const Nav = () => {
 
             <div className="logo"><h4>B's VENDOR  </h4></div>
             </Link>
+
+                 <div className='nav-info'>
+
+          <Link to='/'>home</Link>
+          <Link to='/faq'>faq</Link>
+          <Link to='/services'>our services</Link>
+          <Link to='/product'>products</Link>
+            <Link to='/feedback'>feedbacks</Link>
+            <Link to='/form'><Typography component='button'>sign up</Typography> </Link>
+           
+            </div>
             <div className="navText">
-              <TextField color='secondary' size='small' variant='filled'
+              <TextField  color='secondary' size='medium' variant='filled'
                 InputProps={{
                   endAdornment: <InputAdornment position='start'>
                     <FaSearchengin className='svg-src' />
@@ -40,7 +52,9 @@ const Nav = () => {
                 <FaShoppingBasket />
               </Badge> </div>
             </Link>
-            <div className='menu-btn'> <IconButton onClick={()=>setDraw(true)}>
+            <div className='menu-btn'> <IconButton onClick={() => setDraw(true)}>
+              
+            
             <FaBars  />
             </IconButton></div>
           </div>
@@ -56,10 +70,10 @@ const Nav = () => {
           <div className='drawer'>
 
           <Link to='/'>home</Link>
-          <Link to='/fqr'>faq</Link>
+          <Link to='/faq'>faq</Link>
           <Link to='/services'>our services</Link>
           <Link to='/product'>products</Link>
-          <Link to='/feedback'>feedbacks</Link>
+            <Link to='/feedback'>feedbacks</Link>
           </div>
           <div className='sign'>
             <Button fullWidth> <Link  to="/form"><Typography>SIGN IN</Typography></Link></Button>

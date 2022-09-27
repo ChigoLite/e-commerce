@@ -62,9 +62,7 @@ spacing={4}>
                        dispatch(Decrease(id))
                   }}><AiFillMinusCircle className='svg-adj'/></Button>
                 </ButtonGroup>
-                <Fab sx={{display:'block',marginLeft:'2.5rem',marginTop:'0.5rem'}} size='small' color='primary' onClick={() => {
-                  dispatch(Remove(id))
-                }}><AiFillDelete className='svg-trash' /></Fab>
+            
                 <hr />
                   </Grid>
                   
@@ -78,7 +76,7 @@ spacing={4}>
       <br />
         <br />
         <Link to='/form'>
-        <Button  variant='contained'> <Typography variant='body2' component='button'>Order Now.</Typography></Button>
+        <Button  variant='contained'> <Typography variant='body2' component='div'>Order Now.</Typography></Button>
         </Link>
       <br />
         <br />
