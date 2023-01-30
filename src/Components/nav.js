@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import { ThemeProvider,Stack, AppBar, Toolbar ,Badge, IconButton,Avatar, Drawer,Box, TextField,InputAdornment, Typography, Button} from '@mui/material';
 import { FaShoppingBasket, FaBars,FaSearchengin, FaAdn } from 'react-icons/fa'
 import{useSelector,useDispatch} from 'react-redux'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import Theme from '../theme';
 import{Change} from '../features/cart/slice'
 import FadeMenu from './tesing';
@@ -16,19 +16,19 @@ const Nav = () => {
           <AppBar position='sticky'>
           <Toolbar variant='dense' sx={{height:'5rem'}}>
                   <div className="navCont">
-            <Link to='/'>
+            <NavLink to='/'>
 
             <div className="logo"><h4>B's VENDOR  </h4></div>
-            </Link>
+            </NavLink>
 
                  <div className='nav-info'>
 
-          <Link to='/'>home</Link>
-          <Link to='/faq'>faq</Link>
-          <Link to='/services'>our services</Link>
-          <Link to='/product'>products</Link>
-            <Link to='/feedback'>feedbacks</Link>
-            <Link to='/form'><Typography component='button'>sign up</Typography> </Link>
+          <NavLink to='/'>home</NavLink>
+          <NavLink to='/faq'>faq</NavLink>
+          <NavLink to='/services'>our services</NavLink>
+          <NavLink to='/product'>products</NavLink>
+            <NavLink to='/feedback'>feedbacks</NavLink>
+            <NavLink to='/form'><Typography component='button'>sign up</Typography> </NavLink>
            
             </div>
             <div className="navText">
@@ -46,12 +46,12 @@ const Nav = () => {
           </div>
           <div className="logocont">
 
-            <Link to="/chart">
+            <NavLink to="/chart">
             
               <div><Badge color='secondary' badgeContent={ current}>
                 <FaShoppingBasket />
               </Badge> </div>
-            </Link>
+            </NavLink>
             <div className='menu-btn'> <IconButton onClick={() => setDraw(true)}>
               
             
@@ -69,14 +69,14 @@ const Nav = () => {
           <br />
           <div className='drawer'>
 
-          <Link to='/'>home</Link>
-          <Link to='/faq'>faq</Link>
-          <Link to='/services'>our services</Link>
-          <Link to='/product'>products</Link>
-            <Link to='/feedback'>feedbacks</Link>
+          <NavLink to='/'>home</NavLink>
+          <NavLink to='/faq'>faq</NavLink>
+          <NavLink to='/services'>our services</NavLink>
+          <NavLink to='/product'>products</NavLink>
+            <NavLink to='/feedback'>feedbacks</NavLink>
           </div>
           <div className='sign'>
-            <Button fullWidth> <Link  to="/form"><Typography>SIGN IN</Typography></Link></Button>
+            <Button fullWidth> <NavLink  to="/form"><Typography>SIGN IN</Typography></NavLink></Button>
           </div>
 </Box>
       </Drawer>

@@ -18,7 +18,6 @@ const Chart = () => {
   },[])
   return (
     <>
-      <Nav />
 
       <Container>
         

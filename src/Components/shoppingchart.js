@@ -1,6 +1,5 @@
 import { Avatar, Container,  Typography, ButtonGroup, Button,ThemeProvider, Fab, Grid } from '@mui/material';
 import React from 'react';
-import Nav from './nav';
 import { Link } from 'react-router-dom';
 import { useSelector,useDispatch } from 'react-redux';
 import Theme from '../theme';
@@ -15,7 +14,6 @@ const Shoppingchart = () => {
     
     return (
       <>
-      <Nav /> 
       
       <div className="empty-cart">
           <h3>your cart is empty ....</h3>
@@ -28,7 +26,6 @@ const Shoppingchart = () => {
     <ThemeProvider theme={Theme}>
 
     <>
-      <Nav /> 
       
         <h4 className='cart-text'> review your order so far...procced to order.</h4>
         <hr />

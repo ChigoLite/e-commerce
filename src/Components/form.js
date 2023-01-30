@@ -16,7 +16,6 @@ const Form = () => {
  
     return (
         <>
-            <Nav/>
     <Container>
           <Paper>
               <Typography sx={{ textAlign: 'center', textTransform: 'uppercase' }} variant='h4' component='div' gutterBottom>fill out your address for delivery.</Typography>

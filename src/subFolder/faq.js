@@ -6,7 +6,6 @@ import { FaArrowDown } from 'react-icons/fa';
 const Faq = () => {
     return (
         <>
-            <Nav />
             <br/>
       <Box>
       <Typography sx={{textAlign:'center'}}>Frequent Asked Question.</Typography>

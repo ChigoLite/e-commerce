@@ -14,7 +14,6 @@ const Home = () => {
   const dispatch = useDispatch();
   return (
     <>
-       <Nav />
       
         <Trending />
       {submenu && <SubMenu />}
