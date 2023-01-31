@@ -6,11 +6,11 @@ import Nav from './nav';
 import Trending from './trending';
 import Modal from '../modal';
 import SubMenu from './subMenu';
-import {Filter} from '../features/cart/slice'
+// import {Filter} from '../features/cart/slice'
 
 
 const Home = () => {
-  const { goods, modal, submenu, newcate,search } = useSelector(store => store.cart);
+  const { goods, modal, submenu,search } = useSelector(store => store.cart);
   const dispatch = useDispatch();
   return (
     <>
@@ -22,7 +22,7 @@ const Home = () => {
         <br />
         <br />
       <hr />
-      <Stack direction='row' sx={{marginLeft:'0.6rem',marginTop:'2rem'}}>
+      {/* <Stack direction='row' sx={{marginLeft:'0.6rem',marginTop:'2rem'}}>
 
   {newcate.map((data, index) => {
     return (
@@ -35,7 +35,7 @@ const Home = () => {
             )
           
         })}
-      </Stack>
+      </Stack> */}
           <Container sx={{ marginTop: '7rem' }}>
                 <Grid container direction='row' justifyContent='center'
           alignItems='center'

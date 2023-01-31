@@ -8,7 +8,7 @@ const initialState =
     bags: [],
     modal: false,
     submenu: false,
-    newcate: ['All', ...new Set(gadgets.map(item => item.category))],
+    // newcate: ['All', ...new Set(gadgets.map(item => item.category))],
     search: ''
 }
         
@@ -66,18 +66,18 @@ const Slice = createSlice({
             state.current = currentitem;
             state.total = totalitem;
         },
-        Filter: (state, category) => {
-        if (category.payload==='All') {
-            state.goods = gadgets
-            return;
-        }
-            const newdata= gadgets.filter(newd=>newd.category===category.payload)
-            state.goods = newdata;
-        },
+        // Filter: (state, category) => {
+        // if (category.payload==='All') {
+        //     state.goods = gadgets
+        //     return;
+        // }
+        //     const newdata= gadgets.filter(newd=>newd.category===category.payload)
+        //     state.goods = newdata;
+        // },
         Change: (state, action)=> {
     state.search= action.payload
         }
     }
 })
-export const {Addtochart,Closetoogle,Closesub,Increase,Decrease,Remove,Summation,Filter,Change}=Slice.actions
+export const {Addtochart,Closetoogle,Closesub,Increase,Decrease,Remove,Summation,Change}=Slice.actions
 export default Slice.reducer;
