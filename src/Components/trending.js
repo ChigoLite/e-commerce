@@ -15,7 +15,7 @@ const TrendingImg = () => {
     useEffect(() => {
      const slide=   setInterval(() => {
          setValue(value + 1)
-        }, 6000);
+        }, 100000);
         return () => {
             clearInterval(slide)
         }
@@ -23,10 +23,26 @@ const TrendingImg = () => {
   return (
       <>
           <div className='slide-text'>
-              <h1 className='trendingtxt'>Trending outfits....</h1>
+              <h2>
+                  Welcome Visiting Our Store.
+             </h2>
           </div>
           <div className='slide-cont'>
+              <div className="firstTxt">
+                  
 
+              <h4>
+                  your order is our top priority <br />
+                  keep your oder coming as we keep serving you better.
+              </h4>
+              </div>
+              <div className="secondTxt">
+                  
+              <p>
+                  place your order as we deliver urgently
+                  <span> your surest plug</span>
+              </p>
+              </div>
               {user.map((img, index) => {
                   let position = 'next'
                   if (value===index) {
@@ -37,11 +53,13 @@ const TrendingImg = () => {
                         }
                   return (
                     
+                          <div className='hero-overlay' key={img.id}>
                           
-                      <main key={img.id} className={position}>
+                      <main  className={position}>
                           <img className='image' src={img.image} alt='images' />
                         
                           </main> 
+                          </div>
                         
                )
            })}   
