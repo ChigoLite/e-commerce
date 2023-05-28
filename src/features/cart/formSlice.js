@@ -76,6 +76,7 @@ const Formslice = createSlice({
         window.location.pathname = "/login";
       })
       .addCase(Register.rejected, (state, action) => {
+        state.loading = false;
         state.error = action.payload.msg;
       });
   },

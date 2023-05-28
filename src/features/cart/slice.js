@@ -18,7 +18,7 @@ export const getProducts = createAsyncThunk(
   async (search, thunkApi) => {
     try {
       const resp = await axios(
-        `http://localhost:5000/api/v2/product?search=${search} `
+        `https://e-commerce-server-h5a7.onrender.com/api/v2/product?search=${search} `
       );
       return resp.data.msg;
     } catch (error) {
@@ -35,7 +35,7 @@ export const postCharts = createAsyncThunk(
     const { name, amount, price, image, _id: itemId } = chart;
     try {
       const response = await axios.post(
-        `http://localhost:5000/api/v2/charts/${itemId}`,
+        `https://e-commerce-server-h5a7.onrender.com/api/v2/charts/${itemId}`,
         {
           name,
           amount,
@@ -52,7 +52,9 @@ export const postCharts = createAsyncThunk(
 );
 export const getCharts = createAsyncThunk("products/getCharts", async () => {
   try {
-    const response = await axios.get(`http://localhost:5000/api/v2/allCharts`);
+    const response = await axios.get(
+      `https://e-commerce-server-h5a7.onrender.com/api/v2/allCharts`
+    );
     return response.data.msg;
   } catch (error) {
     console.log(error);
@@ -64,7 +66,7 @@ export const increaseAmt = createAsyncThunk(
   async (id) => {
     try {
       const resp = await axios.patch(
-        `http://localhost:5000/api/v2/charts/amount/${id}`
+        `https://e-commerce-server-h5a7.onrender.com/api/v2/charts/amount/${id}`
       );
     } catch (error) {
       console.log(error);
@@ -76,7 +78,7 @@ export const decreaseAmt = createAsyncThunk(
   async (id) => {
     try {
       const resp = await axios.patch(
-        `http://localhost:5000/api/v2/charts/amount/dec/${id}`
+        `https://e-commerce-server-h5a7.onrender.com/api/v2/charts/amount/dec/${id}`
       );
     } catch (error) {
       console.log(error);
@@ -108,7 +110,7 @@ export const deleteSingleChart = createAsyncThunk(
   async (id) => {
     try {
       const resp = await axios.delete(
-        `http://localhost:5000/api/v2/charts/${id}`
+        `https://e-commerce-server-h5a7.onrender.com/api/v2/charts/${id}`
       );
     } catch (error) {
       console.log(error);
@@ -118,7 +120,7 @@ export const deleteSingleChart = createAsyncThunk(
 export const deleteChart = createAsyncThunk("product/deleteChart", async () => {
   try {
     const resp = await axios.patch(
-      `http://localhost:5000/api/v2/charts/delete`
+      `https://e-commerce-server-h5a7.onrender.com/api/v2/charts/delete`
     );
   } catch (error) {
     console.log(error);

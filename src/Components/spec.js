@@ -26,7 +26,9 @@ const Chart = () => {
 
   useEffect(() => {
     const req = async () => {
-      const data = await axios(`http://localhost:5000/api/v2/product/${id}`);
+      const data = await axios(
+        `https://e-commerce-server-h5a7.onrender.com/api/v2/product/${id}`
+      );
       setCont([data.data.msg]);
       setLoading(false);
     };
