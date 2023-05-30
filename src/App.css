@@ -294,6 +294,7 @@ main.last {
     margin-top: 3px;
 }
 
+
 .spec {
     display: grid;
     grid-template-columns: 60% 40%;
@@ -330,13 +331,26 @@ main.last {
         margin: 5px;
         margin-top:
             30px;
+            text-align: center;
     
+    }
+    .spec {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
     }
     .spec-title p{
         font-weight: 600;
         font-size: 16px;
     }
     
+.login {
+    border: 2px solid;
+    background: rgba(38, 143, 38, 0.418);
+    border-radius: 10px;
+    margin: 4px;
+    font-size: 1rem;
+}
 }
 .svg-arrow {
     font-size: 2rem;

@@ -13,7 +13,7 @@ const CheckoutForm = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/v2/check-session",
+        "https://e-commerce-server-h5a7.onrender.com/api/v2/check-session",
         { bags }
       );
 
